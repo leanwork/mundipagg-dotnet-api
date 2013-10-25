@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://transaction.mundipaggone.com/MundiPaggService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MundiPagg.One.Service.DataContracts" />
+  <xs:element name="CreateOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MundiPagg.One.Service.DataContracts" minOccurs="0" name="createOrderRequest" nillable="true" type="q1:CreateOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MundiPagg.One.Service.DataContracts" minOccurs="0" name="CreateOrderResult" nillable="true" type="q2:CreateOrderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManageOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MundiPagg.One.Service.DataContracts" minOccurs="0" name="manageOrderRequest" nillable="true" type="q3:ManageOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManageOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MundiPagg.One.Service.DataContracts" minOccurs="0" name="ManageOrderResult" nillable="true" type="q4:ManageOrderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MundiPagg.One.Service.DataContracts" minOccurs="0" name="queryOrderRequest" nillable="true" type="q5:QueryOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MundiPagg.One.Service.DataContracts" minOccurs="0" name="QueryOrderResult" nillable="true" type="q6:QueryOrderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstantBuyData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MundiPagg.One.Service.DataContracts" minOccurs="0" name="queryCreditCardDataRequest" nillable="true" type="q7:GetInstantBuyDataRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstantBuyDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MundiPagg.One.Service.DataContracts" minOccurs="0" name="GetInstantBuyDataResult" nillable="true" type="q8:GetInstantBuyDataResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetryOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MundiPagg.One.Service.DataContracts" minOccurs="0" name="manualRetryRequest" nillable="true" type="q9:RetryOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetryOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MundiPagg.One.Service.DataContracts" minOccurs="0" name="RetryOrderResult" nillable="true" type="q10:RetryOrderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
