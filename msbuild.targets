@@ -1,0 +1,63 @@
+<Project
+    DefaultTargets="BuildSolution"
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <BuildSolutionDir>.\</BuildSolutionDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SlnFiles Include="$(BuildSolutionDir)*.sln"/>
+  </ItemGroup>
+
+  <Target Name="BuildSolution">
+
+    <MSBuild Projects="@(SlnFiles)" Targets="Build" Properties="Configuration=Release;"/>
+
+    <CreateItem Include="*.sln.proj">
+      <Output TaskParameter="Include" ItemName="SolutionMSBuildFiles"/>
+    </CreateItem>
+
+    <MSBuild Projects="$(MSBuildProjectFile)"
+				Targets="DoBuildSolution"
+			    Properties="@(SolutionMSBuildFiles->'theSolution=%(Filename)%(Extension)')"/>
+
+  </Target>
+
+
+
+  <PropertyGroup>
+    <DoBuildSolutionDependsOn>
+      BeforeDoBuildSolution;
+      CoreBuildSolution;
+      AfterDoBuildSolution;
+    </DoBuildSolutionDependsOn>
+  </PropertyGroup>
+
+  <Target Name="DoBuildSolution" DependsOnTargets="$(DoBuildSolutionDependsOn)" />
+
+  <Target Name="BeforeDoBuildSolution">
+    <Message Text="*****Before building your solution*****" Importance="high"/>
+  </Target>
+
+
+  <Target Name="CoreBuildSolution">
+    <Message Text="*****building your solution*****" Importance="high"/>
+
+    <MSBuild Projects="$(theSolution)" Targets="BuildSolution"/>
+  </Target>
+
+  <Target Name="AfterDoBuildSolution">
+
+    <Message Text="###After building your solution######" Importance="high"/>
+    <PropertyGroup>
+      <!--TestSuccessOrNot is the property specify whether the Test is sucess or not -->
+      <TestSuccessOrNot>1</TestSuccessOrNot>
+    </PropertyGroup>
+    <!--Run MSTest.exe-->
+    <Exec Command='"$(MSBuildProgramFiles32)\Microsoft Visual Studio 11.0\Common7\IDE\mstest.exe" /testcontainer:"C:\Users\rchagas\Documents\Visual Studio 2012\Projects\MundiPaggClientSDK\src\MundiPaggClientSDK.Test\bin\Release\MundiPaggClientSDK.Test.dll"' >
+      <Output TaskParameter="ExitCode" PropertyName="TestSuccessOrNot"/>
+    </Exec>
+  </Target>
+
+</Project>
