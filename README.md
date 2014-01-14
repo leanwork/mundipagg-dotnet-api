@@ -6,3 +6,8 @@ MundiPagg .NET Client Library
 
 ## Usage
 * [Parsing Status Notification](https://github.com/mundipagg/mundipagg-dotnet-api/wiki/Parsing-Status-Notification)
+
+
+## License
+
+See the LICENSE file.
