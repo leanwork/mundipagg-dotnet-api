@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundiPaggClientSDK", "src\MundiPaggClientSDK\MundiPaggClientSDK.csproj", "{91AAAD6C-7C77-42E5-9AE6-64A70FCF7322}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundiPaggClientSDK.Test", "src\MundiPaggClientSDK.Test\MundiPaggClientSDK.Test.csproj", "{93B50682-D1E3-4D8A-8AEF-4DA87FC1D7C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundiPagg.NET", "MundiPagg.NET\MundiPagg.NET.csproj", "{C041B472-C228-4780-A0D8-FCE7208531D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +23,10 @@ Global
 		{93B50682-D1E3-4D8A-8AEF-4DA87FC1D7C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93B50682-D1E3-4D8A-8AEF-4DA87FC1D7C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93B50682-D1E3-4D8A-8AEF-4DA87FC1D7C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C041B472-C228-4780-A0D8-FCE7208531D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C041B472-C228-4780-A0D8-FCE7208531D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C041B472-C228-4780-A0D8-FCE7208531D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C041B472-C228-4780-A0D8-FCE7208531D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
